@@ -1,0 +1,38 @@
+
+	PAGE_SIZE = 4096 Bytes
+	ROWS Calculation: 
+		Free = 10581566 kbytes
+		ROWS = (10581566 * 200) / 4096
+			 =  517436
+	
+	Command being timed: "./memA"
+	User time (seconds): 2.11
+	System time (seconds): 2.13
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.26
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8292096
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 2072839
+	Voluntary context switches: 2
+	Involuntary context switches: 47
+	Swaps: 0
+	File system inputs: 16
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+
+There was such a large number of minor page faults because the ROWS of the allocated
+were significantly greater than the size of the process' pagetable. As a result all the pages of our process didn't get an entry in the process' page table.
+Nevertheless since the size of memory was large enough and there weren't many other running processes,
+the process' pages were mapped to some place in RAM but not pointed to by the process page table, i.e. a minor(soft) fault. 
+
+

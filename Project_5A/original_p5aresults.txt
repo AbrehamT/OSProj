@@ -1,0 +1,25 @@
+##############################################
+
+-------------------
+Timed Test (1 thread)
+Number of Duck Counts: 1931049000
+
+-------------------
+Timed Test (2 thread)
+Number of Duck Counts: 1931049000
+
+-------------------
+Timed Test (3 thread)
+Number of Duck Counts: 1931049000
+
+-------------------
+Timed Test (4 thread)
+Number of Duck Counts: 1931049000
+
+-------------------
+Timed Test (5 thread)
+Number of Duck Counts: 1931049000
+
+-------------------
+Timed Test (6 thread)
+Number of Duck Counts: 1931049000
